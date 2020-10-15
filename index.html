@@ -471,35 +471,46 @@
           </svg>
           </button>
           <div class="order-content">
-          <h2>Оставьте свои данные, мы вам перезвоним</h2>
+          <h2 class="title-form form-field">Оставьте свои данные, мы вам перезвоним</h2>
          
           <div class="form-field">
-             <label for="name" class="" class="">Имя</label>
+            
+             <label for="name" class="">Имя</label>
              <svg width="18" height="18" class="proba">
                <use href="./images/sprite.svg#icon-person"></use>
              </svg>
             <input type="text" name="name" id="name" class="proba-new" name="user-name"/>
+          
           </div> 
 
           <div class="form-field">
             <label for="phone" class="">Телефон</label>
-            <input type="phone" name="phone" id="phone" class="" name="user-phone" /> 
+          <svg width="18" height="18" class="proba">
+            <use href="./images/sprite.svg#icon-phone"></use>
+          </svg>
+            <input type="phone" name="phone" id="phone" class="proba-new" name="user-phone" /> 
           </div>
 
           <div class="form-field">
              <label for="mail" class="">Почта</label>
-            <input type="email" name="mail" id="mail" class="" name="user-mail" />
+          <svg width="18" height="18" class="proba">
+            <use href="./images/sprite.svg#icon-mail"></use>
+          </svg>
+             <input type="email" name="mail" id="mail" class="proba-new" name="user-mail" />
           </div>
          
-          <div>
+          <div class="form-field">
            <label for="comments">Коментарий</label>
-          <textarea name="comments" id="comments" cols="30" rows="10" placeholder="Коментарий" ></textarea> 
+          <textarea name="comments" id="comments" cols="30" rows="10" placeholder="Коментарий" class="textarea"></textarea> 
           </div> 
           
-            <input type="checkbox" name="agree" id="agree">
-            <label for="agree">Соглашаюсь с рассылкой и принимаю <a href="">Условия договора</a> </label>
-          <button type="submit" >Отправить</button>
-      </div>
+          <div class="proba-three"> 
+          <input type="checkbox" name="agree" id="agree">
+            <label for="agree" class="proba-four">Соглашаюсь с рассылкой и принимаю <a href="">Условия договора</a> </label>
+          </div>
+            <button type="submit" >Отправить</button>
+          
+        </div>
       </div>
     </div>
     <script src="./js/modal.js"></script>
