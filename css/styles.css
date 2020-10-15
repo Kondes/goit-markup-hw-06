@@ -528,8 +528,14 @@ img {
   align-items: baseline;
 }
 
+.subscribe-mail {
+  display: flex;
+  flex-direction: column;
+}
+
 .form {
   display: flex;
+  justify-content: space-between;
 }
 
 /*------END FOOTER------*/
