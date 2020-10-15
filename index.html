@@ -441,8 +441,7 @@
             </li>
           </ul>
         </div>
-        
-          <form action="" class="footer-form">
+        <form action="" class="footer-form">
             <div class="subscribe-mail">
               <label for="subscribe" class="title-sibscribe"
                 >Подпишитесь на рассылку</label>
@@ -453,8 +452,7 @@
                 class="text-mail"
                 placeholder="E-mail"/>
             </div>
-            
-              <button type="submit" class="send-button">
+             <button type="submit" class="send-button">
                 Подписаться
                 <svg width="24" height="24" class="svg-subscribe">
                   <use href="./images/sprite.svg#icon-iconsend"></use>
@@ -471,7 +469,37 @@
           <svg width="30" height="30">
             <use href="./images/sprite.svg#icon-close-ic"></use>
           </svg>
-        </button>
+          </button>
+          <div class="order-content">
+          <h2>Оставьте свои данные, мы вам перезвоним</h2>
+         
+          <div class="form-field">
+             <label for="name" class="" class="">Имя</label>
+             <svg width="18" height="18" class="proba">
+               <use href="./images/sprite.svg#icon-person"></use>
+             </svg>
+            <input type="text" name="name" id="name" class="proba-new" name="user-name"/>
+          </div> 
+
+          <div class="form-field">
+            <label for="phone" class="">Телефон</label>
+            <input type="phone" name="phone" id="phone" class="" name="user-phone" /> 
+          </div>
+
+          <div class="form-field">
+             <label for="mail" class="">Почта</label>
+            <input type="email" name="mail" id="mail" class="" name="user-mail" />
+          </div>
+         
+          <div>
+           <label for="comments">Коментарий</label>
+          <textarea name="comments" id="comments" cols="30" rows="10" placeholder="Коментарий" ></textarea> 
+          </div> 
+          
+            <input type="checkbox" name="agree" id="agree">
+            <label for="agree">Соглашаюсь с рассылкой и принимаю <a href="">Условия договора</a> </label>
+          <button type="submit" >Отправить</button>
+      </div>
       </div>
     </div>
     <script src="./js/modal.js"></script>

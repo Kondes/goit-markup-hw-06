@@ -756,3 +756,18 @@ img {
   background-color: var(--main-text-color);
   cursor: pointer;
 }
+.order-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.form-field input {
+  height: 40px;
+  width: 448px;
+}
