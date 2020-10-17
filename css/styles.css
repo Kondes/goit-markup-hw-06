@@ -567,15 +567,16 @@ img {
 .text-mail {
   width: 358px;
   height: 50px;
+  margin-top: 20px;
 }
 .subscribe-mail input {
   padding: 15px;
+  font-size: 16px;
   background-color: var(--background-color);
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-sizing: border-box;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
-  margin-top: 20px;
 }
 
 .title-sibscribe {
@@ -633,7 +634,6 @@ img {
 .projects:hover,
 .projects:focus {
   background-color: var(--accent-color);
-
   color: var(--main-text-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
@@ -743,8 +743,11 @@ img {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+  padding: 40px;
 }
 .close-btn {
+  width: 30px;
+  height: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -755,51 +758,127 @@ img {
   border-radius: 50%;
   background-color: var(--main-text-color);
   cursor: pointer;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.order-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.close-btn:hover {
+  fill: var(--accent-color);
+}
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
 }
 .title-form {
+  text-align: center;
   font-size: 20px;
+  line-height: 23px;
+  letter-spacing: 0.03em;
+  margin-bottom: 12px;
 }
-
-.form-field {
+.modal-form {
   display: flex;
   flex-direction: column;
-  margin-bottom: 10px;
 }
-
-.form-field {
-  position: relative;
-  margin-left: 40px;
+.modal-form-input:focus,
+.modal-form-message:focus {
+  outline: none;
+  border: 1px solid var(--accent-color);
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.proba-new {
+.modal-form-input:focus + .modal-form-svg {
+  fill: var(--accent-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-form-input {
+  display: block;
+  width: 100%;
   height: 40px;
-  width: 448px;
   border: 1px solid rgba(33, 33, 33, 0.2);
-  box-sizing: border-box;
   border-radius: 4px;
+  padding-left: 42px;
+  cursor: pointer;
 }
-.proba {
-  display: inline-block;
+.modal-form-wraper {
+  display: block;
+  position: relative;
+  margin-top: 4px;
+}
+.modal-form-message {
+  padding: 12px 16px;
+  font-size: 12px;
+  letter-spacing: 0.01em;
+  height: 120px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  resize: none;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+.modal-form-field {
+  margin-bottom: 10px;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+  color: var(--primary-text-color);
+}
+.modal-form-svg {
   position: absolute;
-  bottom: 0;
+  top: 50%;
   left: 12px;
-  transform: translateY(-60%);
-}
-.textarea {
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  box-sizing: border-box;
-  border-radius: 4px;
-}
-.proba-three {
-  display: flex;
-  align-items: center;
-  margin-left: 52px;
+  transform: translateY(-50%);
 }
 
-.proba-four {
-  margin-left: 8px;
+.modal-label-agree::before {
+  display: inline-block;
+  content: '';
+  border: 2px solid var(--title-text-color);
+  border-radius: 2px;
+  width: 16px;
+  height: 15px;
+  margin-right: 7px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-form-agree:checked + .modal-label-agree::before {
+  background-color: var(--accent-color);
+  background-image: url(../images/modal/iconcheck.svg);
+  background-size: contain;
+  background-origin: border-box;
+  border-color: var(--accent-color);
+}
+.text-form {
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+  color: var(--primary-text-color);
+  margin-bottom: 4px;
+}
+.modal-label-agree {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  color: var(--primary-text-color);
+  margin-bottom: 30px;
+}
+
+.modal-form-btn {
+  margin: auto;
+  align-self: flex-start;
+  background: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: solid transparent;
+  height: 50px;
+  width: 200px;
+  font-size: 16px;
+  letter-spacing: 0.06em;
+  color: var(--main-text-color);
+  cursor: pointer;
 }
