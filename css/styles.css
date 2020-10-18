@@ -568,6 +568,7 @@ img {
   width: 358px;
   height: 50px;
   margin-top: 20px;
+  color: var(--main-text-color);
 }
 .subscribe-mail input {
   padding: 15px;
